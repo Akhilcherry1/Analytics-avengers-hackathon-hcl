@@ -1,0 +1,60 @@
+{
+  "model": "Logistic Regression",
+  "parameters": {
+    "C": 0.1,
+    "solver": "lbfgs",
+    "max_iter": 2000,
+    "class_weight": "balanced",
+    "random_state": 42
+  },
+  "validation_rows": 1000,
+  "validation_churn_rate": 0.591,
+  "PR_AUC": 0.8045580859203079,
+  "ROC_AUC": 0.7498583065460307,
+  "precision_at_0_5": 0.7065368567454798,
+  "recall_at_0_5": 0.8595600676818951,
+  "F1_at_0_5": 0.7755725190839695,
+  "split_note": "Signup-date sorted sequential 80:20 cohort holdout; observation_date is identical for all rows, so this is not a later observation-period temporal holdout.",
+  "numeric_features": [
+    "tenure_days",
+    "monthly_charge",
+    "avg_monthly_usage_hours",
+    "usage_change_pct_30d",
+    "support_tickets_last_90d",
+    "unresolved_tickets",
+    "satisfaction_score",
+    "nps_score",
+    "payments_due_last_6m",
+    "payments_made_on_time_last_6m",
+    "failed_payments_last_6m",
+    "autopay_enabled",
+    "discount_pct_applied",
+    "days_to_renewal",
+    "plan_downgrade_last_90d",
+    "add_on_services_count",
+    "usage_per_active_day",
+    "payment_success_rate",
+    "payment_failure_rate",
+    "unresolved_ticket_ratio",
+    "renewal_discount_risk",
+    "downgrade_usage_decline",
+    "customer_duration_days"
+  ],
+  "categorical_features": [
+    "plan_tier",
+    "customer_segment",
+    "contract_type",
+    "region",
+    "payment_method"
+  ],
+  "encoded_feature_count": 42,
+  "versions": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "scikit_learn": "1.8.0",
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "xgboost": "3.1.3",
+    "shap": "0.50.0"
+  },
+  "shap_status": "generated with SHAP 0.50.0"
+}
